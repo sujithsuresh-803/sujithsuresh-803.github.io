@@ -209,7 +209,7 @@
   <div class="ssec">Links</div>
   <a href="https://linkedin.com/in/sujith-suresh" target="_blank" class="sbi"><span class="sbi-ic">💼</span>LinkedIn</a>
   <a href="https://sujithsuresh.github.io" target="_blank" class="sbi"><span class="sbi-ic">🌐</span>Portfolio</a>
-  <a href="mailto:sujithsuresh803@gmail.com" class="sbi"><span class="sbi-ic">✉️</span>Email</a>
+  <a href="/cdn-cgi/l/email-protection#6714120d0e130f14121502140f5f575427000a060e0b4904080a" class="sbi"><span class="sbi-ic">✉️</span>Email</a>
 </div>
 
 <div class="main">
@@ -241,8 +241,8 @@
       </div>
     </div>
     <div class="chr">
-      <!-- Hire Me → opens mail client -->
-      <a href="mailto:sujithsuresh803@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Sujith%20Suresh&body=Hi%20Sujith%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect%20about%20a%20potential%20opportunity.%0A%0A" class="bsub">Hire Me</a>
+      <!-- Hire Me → modal -->
+      <button class="bsub" onclick="openHireModal()">Hire Me</button>
 
       <!-- ••• → phone dropdown -->
       <div class="more-wrap">
@@ -256,11 +256,11 @@
             </div>
           </a>
           <div class="more-divider"></div>
-          <a href="mailto:sujithsuresh803@gmail.com" class="more-item">
+          <a href="/cdn-cgi/l/email-protection#fb888e91928f93888e899e8893c3cbc8bb9c969a9297d5989496" class="more-item">
             <span class="more-item-ic">✉️</span>
             <div>
               <span class="more-item-label">Email</span>
-              <span class="more-item-val">sujithsuresh803@gmail.com</span>
+              <span class="more-item-val"><span class="__cf_email__" data-cfemail="ccbfb9a6a5b8a4bfb9bea9bfa4f4fcff8caba1ada5a0e2afa3a1">[email&#160;protected]</span></span>
             </div>
           </a>
           <div class="more-divider"></div>
@@ -410,7 +410,7 @@
           <p>B.Tech Mechanical Engineering · Amrita School of Engineering · CGPA 8.46</p>
         </div>
         <div class="alinks">
-          <a href="mailto:sujithsuresh803@gmail.com" class="alink">✉️&nbsp; sujithsuresh803@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#186b6d72716c706b6d6a7d6b7020282b587f75797174367b7775" class="alink">✉️&nbsp; <span class="__cf_email__" data-cfemail="8bf8fee1e2ffe3f8fef9eef8e3b3bbb8cbece6eae2e7a5e8e4e6">[email&#160;protected]</span></a>
           <a href="tel:+918296491170" class="alink">📞&nbsp; +91 8296491170</a>
           <a href="https://linkedin.com/in/sujith-suresh" target="_blank" class="alink">💼&nbsp; linkedin.com/in/sujith-suresh</a>
           <a href="https://sujithsuresh.github.io" target="_blank" class="alink">🌐&nbsp; sujithsuresh.github.io</a>
@@ -425,7 +425,7 @@
     <div class="ccard rv">
       <div class="ctit">Open to Product Manager, AI Engineering, and Platform roles where ownership is real.</div>
       <div class="cgrid">
-        <a href="mailto:sujithsuresh803@gmail.com" class="cc2"><span style="font-size:1.2rem">✉️</span><div><div class="ccl">Email</div><div class="ccv">sujithsuresh803@gmail.com</div></div></a>
+        <a href="/cdn-cgi/l/email-protection#93e0e6f9fae7fbe0e6e1f6e0fbaba3a0d3f4fef2faffbdf0fcfe" class="cc2"><span style="font-size:1.2rem">✉️</span><div><div class="ccl">Email</div><div class="ccv"><span class="__cf_email__" data-cfemail="2f5c5a45465b475c5a5d4a5c47171f1c6f48424e4643014c4042">[email&#160;protected]</span></div></div></a>
         <a href="tel:+918296491170" class="cc2"><span style="font-size:1.2rem">📞</span><div><div class="ccl">Phone</div><div class="ccv">+91 8296491170</div></div></a>
         <a href="https://linkedin.com/in/sujith-suresh" target="_blank" class="cc2"><span style="font-size:1.2rem">💼</span><div><div class="ccl">LinkedIn</div><div class="ccv">linkedin.com/in/sujith-suresh</div></div></a>
       </div>
@@ -435,36 +435,80 @@
 </div>
 </div>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><!-- HIRE ME MODAL -->
+<div id="hireModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.72);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div style="background:#1c1c1c;border:1px solid #3a3a3a;border-radius:16px;max-width:480px;width:calc(100% - 48px);padding:36px 32px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,0.7);animation:modalIn .22s ease;">
+    <!-- close -->
+    <button onclick="closeHireModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:1.4rem;cursor:pointer;line-height:1;padding:4px 8px;border-radius:6px;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'">✕</button>
+
+    <!-- heading -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+      <div style="width:38px;height:28px;background:#FF0000;border-radius:7px;display:flex;align-items:center;justify-content:center;color:white;font-size:.7rem;flex-shrink:0;">▶</div>
+      <h2 style="font-size:1.15rem;font-weight:700;color:#f1f1f1;font-family:'Roboto',sans-serif;">Interested in Working Together?</h2>
+    </div>
+    <p style="font-size:.84rem;color:#aaa;line-height:1.7;margin-bottom:26px;font-family:'Roboto',sans-serif;padding-left:50px;">
+      Thank you for considering me. Please feel free to reach out through any of the channels below — I typically respond within 24 hours.
+    </p>
+
+    <!-- contact options -->
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="mailto:sujithsuresh803@gmail.com?subject=Hiring%20Inquiry%20%E2%80%94%20Sujith%20Suresh" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#2a2a2a;border:1px solid #3a3a3a;border-radius:10px;text-decoration:none;color:#f1f1f1;transition:border-color .15s,background .15s;font-family:'Roboto',sans-serif;" onmouseover="this.style.borderColor='#FF0000';this.style.background='rgba(255,0,0,0.06)'" onmouseout="this.style.borderColor='#3a3a3a';this.style.background='#2a2a2a'">
+        <span style="font-size:1.2rem;flex-shrink:0;">✉️</span>
+        <div>
+          <div style="font-size:.62rem;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;">Email</div>
+          <div style="font-size:.86rem;font-weight:500;">sujithsuresh803@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+918296491170" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#2a2a2a;border:1px solid #3a3a3a;border-radius:10px;text-decoration:none;color:#f1f1f1;transition:border-color .15s,background .15s;font-family:'Roboto',sans-serif;" onmouseover="this.style.borderColor='#FF0000';this.style.background='rgba(255,0,0,0.06)'" onmouseout="this.style.borderColor='#3a3a3a';this.style.background='#2a2a2a'">
+        <span style="font-size:1.2rem;flex-shrink:0;">📞</span>
+        <div>
+          <div style="font-size:.62rem;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;">Phone</div>
+          <div style="font-size:.86rem;font-weight:500;">+91 82964 91170</div>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/sujith-suresh" target="_blank" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#2a2a2a;border:1px solid #3a3a3a;border-radius:10px;text-decoration:none;color:#f1f1f1;transition:border-color .15s,background .15s;font-family:'Roboto',sans-serif;" onmouseover="this.style.borderColor='#FF0000';this.style.background='rgba(255,0,0,0.06)'" onmouseout="this.style.borderColor='#3a3a3a';this.style.background='#2a2a2a'">
+        <span style="font-size:1.2rem;flex-shrink:0;">💼</span>
+        <div>
+          <div style="font-size:.62rem;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;">LinkedIn</div>
+          <div style="font-size:.86rem;font-weight:500;">linkedin.com/in/sujith-suresh</div>
+        </div>
+      </a>
+    </div>
+
+    <p style="font-size:.74rem;color:#666;margin-top:20px;text-align:center;font-family:'Roboto',sans-serif;">I look forward to connecting with you.</p>
+  </div>
+</div>
+
+<style>
+@keyframes modalIn {
+  from { opacity:0; transform:scale(0.94) translateY(12px); }
+  to   { opacity:1; transform:scale(1) translateY(0); }
+}
+</style>
+
 <script>
+  // Hire Me modal
+  function openHireModal() {
+    const m = document.getElementById('hireModal');
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeHireModal() {
+    const m = document.getElementById('hireModal');
+    m.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('hireModal').addEventListener('click', function(e) {
+      if (e.target === this) closeHireModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeHireModal();
+    });
+  });
+
   // Scroll reveal
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('on'), i*45); });
   }, { threshold: 0.06 });
-  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-
-  // Tabs
-  document.querySelectorAll('.tab').forEach(t => {
-    t.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
-      t.classList.add('on');
-    });
-  });
-  document.querySelectorAll('.sbi').forEach(s => {
-    s.addEventListener('click', () => {
-      document.querySelectorAll('.sbi').forEach(x => x.classList.remove('on'));
-      s.classList.add('on');
-    });
-  });
-
-  // ••• dropdown toggle
-  function toggleMore(e) {
-    e.stopPropagation();
-    document.getElementById('moreDropdown').classList.toggle('open');
-  }
-  // Close dropdown when clicking outside
-  document.addEventListener('click', () => {
-    document.getElementById('moreDropdown').classList.remove('open');
-  });
-</script>
-</body>
-</html>
+  document
