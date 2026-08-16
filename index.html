@@ -47,7 +47,9 @@
   .stat-cell { background: var(--white); padding: 32px 28px; transition: background 0.2s; }
   .stat-cell:hover { background: var(--accent-light); }
   .stat-big { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: -0.04em; margin-bottom: 8px; }
-  .stat-big span { color: var(--accent); }
+  .stat-big span { color: var(--accent); font-size: 0.42em; letter-spacing: 0; margin-left: 3px; }
+  .hero-stats-note { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.03em; color: var(--muted); margin-top: 20px; line-height: 1.65; }
+  .hero-stats-note strong { color: var(--ink); font-weight: 500; }
   .stat-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
   .hero-brands { margin-top: 40px; animation: fadeUp 0.5s 0.35s ease both; }
   .brands-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 16px; }
@@ -210,22 +212,23 @@
     <div class="hero-stats-title">Impact by numbers</div>
     <div class="stats-grid">
       <div class="stat-cell">
-        <div class="stat-big">2<span>+</span></div>
-        <div class="stat-desc">Live AI tools built &amp; deployed from scratch</div>
+        <div class="stat-big">$200K<span>/yr</span></div>
+        <div class="stat-desc">Licensing cost cut by consolidating pricing onto one platform</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">90–95<span>%</span></div>
+        <div class="stat-desc">Triage accuracy on 200+ IoT alarms/day (agentic AI)</div>
       </div>
       <div class="stat-cell">
         <div class="stat-big">50<span>+</span></div>
         <div class="stat-desc">Countries using features I shipped</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-big">100<span>%</span></div>
-        <div class="stat-desc">RCA accuracy on alarm automation</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-big">800<span>+</span></div>
-        <div class="stat-desc">Customer interactions handled &amp; insights delivered</div>
+        <div class="stat-big">100<span>+</span></div>
+        <div class="stat-desc">Industrial sites on zero-touch automated reporting</div>
       </div>
     </div>
+    <div class="hero-stats-note"><strong>5 products shipped solo</strong> · <strong>6 AI &amp; ML systems built</strong> — on my own &amp; in production at Buckman</div>
     <div class="hero-brands">
       <div class="brands-label">Experience at</div>
       <div class="brands-row">
@@ -414,11 +417,112 @@
         </div>
       </div>
 
-
       <div class="case-card reveal">
         <div class="case-inner">
           <div class="case-left">
             <div class="case-number">03</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live in Production</div><div class="case-title">3PC No-Data Alarm</div><div class="case-company">BUCKMAN &middot; GLOBAL</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Zero visibility into connectivity-loss events for third-party IoT controllers — when data stopped flowing, <strong>no one knew</strong>. Sales, CSE &amp; RDEM teams were flying blind.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Identified the gap through support discovery. Authored full <strong>BRD, FRD &amp; Figma wireframes</strong>. Drove Agile delivery end-to-end from concept to production across EMENA, RSA &amp; NA.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">100% data-loss detection</span><span class="impact-chip">50+ global controllers</span><span class="impact-chip">#1 requested feature</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">BRD / FRD</span><span class="tech">Figma</span><span class="tech">Agile</span><span class="tech">Azure IoT Hub</span><span class="tech">Python</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">04</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live in Production</div><div class="case-title">IoT Alarm Automation Engine</div><div class="case-company">BUCKMAN &middot; GLOBAL</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">L1 analysts were manually triaging alarms for 1,000+ IoT sensors — repetitive, time-consuming, and inconsistent at scale.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Built Python scripts replicating full analyst logic (assign &rarr; diagnose &rarr; RCA &rarr; recommend &rarr; release). Integrated <strong>LENS, AT&amp;T &amp; Azure Device Explorer APIs</strong> for real-time diagnostics.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">100% RCA accuracy</span><span class="impact-chip">100+ hrs/week saved</span><span class="impact-chip">Zero human intervention</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">Python</span><span class="tech">Azure IoT Hub</span><span class="tech">LENS API</span><span class="tech">AT&amp;T API</span><span class="tech">Docker</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">05</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live &middot; Customer-Facing</div><div class="case-title">Cloak, ACM &amp; ABM Dashboards</div><div class="case-company">BUCKMAN &middot; 50+ COUNTRIES</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">No unified visibility into IoT controller health globally. Outages were discovered reactively — through customer complaints.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Built three <strong>Power BI dashboards with Row-Level Security</strong> — each sales rep sees only their accounts. Cloak extended to customer-facing access from Jan 2026.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">Fleet-wide outage caught proactively</span><span class="impact-chip blue">Daily use across 50+ countries</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">Power BI</span><span class="tech">Row-Level Security</span><span class="tech">Python</span><span class="tech">SQL</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">06</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live &middot; 4 Regions</div><div class="case-title">Azure OCR / RPA — PO Automation</div><div class="case-company">BUCKMAN &middot; EMENA, RSA, NA, APAC</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Customer POs arrived as unstructured PDFs — manually keyed into the system, slow and error-prone across global regions.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Maintained &amp; expanded an <strong>Azure Logic App using OCR models</strong> to auto-parse PDFs into governed SQL databases. Trained new document formats, onboarded new regions.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">Manual hours &rarr; &lt;30 seconds</span><span class="impact-chip">4 global regions</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">Azure Logic Apps</span><span class="tech">OCR Models</span><span class="tech">SQL</span><span class="tech">RPA</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">07</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Shipped &middot; Amazon</div><div class="case-title">Last Mile WBR Dashboard</div><div class="case-company">AMAZON &middot; HYDERABAD</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">20+ logistics departments tracking KPIs in silos — no unified view, heavy manual effort, no consistent reporting standard.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Ran KPI discovery sessions with each team. Built a <strong>unified QuickSight dashboard</strong> backed by an automated AWS S3 ETL pipeline. Authored WBR metric documentation standardising definitions, data sources, and calculation logic across all business units.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">80% reduction in manual effort</span><span class="impact-chip">20+ teams unified</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">Amazon QuickSight</span><span class="tech">AWS S3</span><span class="tech">Redshift</span><span class="tech">ETL</span><span class="tech">SQL</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">08</div>
+            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Shipped &middot; Bosch</div><div class="case-title">AIVA — Automatic Inspection using Video Analysis</div><div class="case-company">ROBERT BOSCH &middot; BENGALURU</div></div>
+          </div>
+          <div class="case-right">
+            <div class="psi">
+              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Fuel pump assembly relied on manual inspection — wrong or missing parts caused costly defects on a live production line.</div></div>
+              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Co-built AIVA using <strong>OpenCV &amp; Siemens S7 PLC</strong> — real-time glove tracking against a SQLite ROI database detecting wrong-part and missing-part errors instantly.</div></div>
+              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">70% defect reduction</span><span class="impact-chip">Real-time detection</span></div></div></div>
+            </div>
+            <div class="case-tech"><span class="tech">Python</span><span class="tech">OpenCV</span><span class="tech">Siemens S7 PLC</span><span class="tech">SQLite</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-inner">
+          <div class="case-left">
+            <div class="case-number">09</div>
             <div>
               <div class="case-badge badge-ai"><span class="badge-dot"></span>Live &middot; AI Tool</div>
               <div class="case-title">FinSight AI</div>
@@ -443,7 +547,7 @@
       <div class="case-card reveal">
         <div class="case-inner">
           <div class="case-left">
-            <div class="case-number">04</div>
+            <div class="case-number">10</div>
             <div>
               <div class="case-badge badge-ai"><span class="badge-dot"></span>Live &middot; AI Tool</div>
               <div class="case-title">VoC Intelligence Platform</div>
@@ -468,7 +572,7 @@
       <div class="case-card reveal">
         <div class="case-inner">
           <div class="case-left">
-            <div class="case-number">05</div>
+            <div class="case-number">11</div>
             <div>
               <div class="case-badge badge-ai"><span class="badge-dot"></span>Live &middot; PM Tool</div>
               <div class="case-title">PriorityLens</div>
@@ -486,108 +590,6 @@
               <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip orange">Live &amp; deployed</span><span class="impact-chip blue">3 frameworks in one tool</span><span class="impact-chip">Built from real PM pain</span></div></div></div>
             </div>
             <div class="case-tech"><span class="tech">React</span><span class="tech">Recharts</span><span class="tech">JavaScript</span><span class="tech">RICE / ICE / MoSCoW</span><span class="tech">CSV Export</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">06</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live in Production</div><div class="case-title">3PC No-Data Alarm</div><div class="case-company">BUCKMAN &middot; GLOBAL</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Zero visibility into connectivity-loss events for third-party IoT controllers — when data stopped flowing, <strong>no one knew</strong>. Sales, CSE &amp; RDEM teams were flying blind.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Identified the gap through support discovery. Authored full <strong>BRD, FRD &amp; Figma wireframes</strong>. Drove Agile delivery end-to-end from concept to production across EMENA, RSA &amp; NA.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">100% data-loss detection</span><span class="impact-chip">50+ global controllers</span><span class="impact-chip">#1 requested feature</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">BRD / FRD</span><span class="tech">Figma</span><span class="tech">Agile</span><span class="tech">Azure IoT Hub</span><span class="tech">Python</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">07</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live in Production</div><div class="case-title">IoT Alarm Automation Engine</div><div class="case-company">BUCKMAN &middot; GLOBAL</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">L1 analysts were manually triaging alarms for 1,000+ IoT sensors — repetitive, time-consuming, and inconsistent at scale.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Built Python scripts replicating full analyst logic (assign &rarr; diagnose &rarr; RCA &rarr; recommend &rarr; release). Integrated <strong>LENS, AT&amp;T &amp; Azure Device Explorer APIs</strong> for real-time diagnostics.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">100% RCA accuracy</span><span class="impact-chip">100+ hrs/week saved</span><span class="impact-chip">Zero human intervention</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">Python</span><span class="tech">Azure IoT Hub</span><span class="tech">LENS API</span><span class="tech">AT&amp;T API</span><span class="tech">Docker</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">08</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live &middot; Customer-Facing</div><div class="case-title">Cloak, ACM &amp; ABM Dashboards</div><div class="case-company">BUCKMAN &middot; 50+ COUNTRIES</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">No unified visibility into IoT controller health globally. Outages were discovered reactively — through customer complaints.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Built three <strong>Power BI dashboards with Row-Level Security</strong> — each sales rep sees only their accounts. Cloak extended to customer-facing access from Jan 2026.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">Fleet-wide outage caught proactively</span><span class="impact-chip blue">Daily use across 50+ countries</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">Power BI</span><span class="tech">Row-Level Security</span><span class="tech">Python</span><span class="tech">SQL</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">09</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Live &middot; 4 Regions</div><div class="case-title">Azure OCR / RPA — PO Automation</div><div class="case-company">BUCKMAN &middot; EMENA, RSA, NA, APAC</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Customer POs arrived as unstructured PDFs — manually keyed into the system, slow and error-prone across global regions.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Maintained &amp; expanded an <strong>Azure Logic App using OCR models</strong> to auto-parse PDFs into governed SQL databases. Trained new document formats, onboarded new regions.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">Manual hours &rarr; &lt;30 seconds</span><span class="impact-chip">4 global regions</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">Azure Logic Apps</span><span class="tech">OCR Models</span><span class="tech">SQL</span><span class="tech">RPA</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">10</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Shipped &middot; Amazon</div><div class="case-title">Last Mile WBR Dashboard</div><div class="case-company">AMAZON &middot; HYDERABAD</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">20+ logistics departments tracking KPIs in silos — no unified view, heavy manual effort, no consistent reporting standard.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Ran KPI discovery sessions with each team. Built a <strong>unified QuickSight dashboard</strong> backed by an automated AWS S3 ETL pipeline. Authored WBR metric documentation standardising definitions, data sources, and calculation logic across all business units.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">80% reduction in manual effort</span><span class="impact-chip">20+ teams unified</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">Amazon QuickSight</span><span class="tech">AWS S3</span><span class="tech">Redshift</span><span class="tech">ETL</span><span class="tech">SQL</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-card reveal">
-        <div class="case-inner">
-          <div class="case-left">
-            <div class="case-number">11</div>
-            <div><div class="case-badge badge-prod"><span class="badge-dot"></span>Shipped &middot; Bosch</div><div class="case-title">AIVA — Automatic Inspection using Video Analysis</div><div class="case-company">ROBERT BOSCH &middot; BENGALURU</div></div>
-          </div>
-          <div class="case-right">
-            <div class="psi">
-              <div class="psi-row"><div class="psi-label">Problem</div><div class="psi-text">Fuel pump assembly relied on manual inspection — wrong or missing parts caused costly defects on a live production line.</div></div>
-              <div class="psi-row"><div class="psi-label">Solution</div><div class="psi-text">Co-built AIVA using <strong>OpenCV &amp; Siemens S7 PLC</strong> — real-time glove tracking against a SQLite ROI database detecting wrong-part and missing-part errors instantly.</div></div>
-              <div class="psi-row"><div class="psi-label">Impact</div><div class="psi-text"><div class="impact-bar"><span class="impact-chip">70% defect reduction</span><span class="impact-chip">Real-time detection</span></div></div></div>
-            </div>
-            <div class="case-tech"><span class="tech">Python</span><span class="tech">OpenCV</span><span class="tech">Siemens S7 PLC</span><span class="tech">SQLite</span></div>
           </div>
         </div>
       </div>
