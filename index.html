@@ -248,10 +248,10 @@
   <div class="ai-tools-inner">
     <div class="ai-tools-header reveal">
       <div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>AI Projects</div>
-        <div class="ai-tools-title">Built from scratch. <em>Deployed and live.</em></div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block"></span>Projects &amp; Builds</div>
+        <div class="ai-tools-title">Built from scratch. <em>Open-sourced &amp; live.</em></div>
       </div>
-      <div class="ai-tools-sub">Claude Opus 5 &middot; Gemini &middot; MCP &middot; Python &middot; Streamlit</div>
+      <div class="ai-tools-sub">Python &middot; Claude &middot; MCP &middot; RAG &middot; Knowledge Graphs &middot; Ad-Tech &middot; Product Strategy</div>
     </div>
     <div class="ai-tools-grid reveal">
 
@@ -325,6 +325,74 @@
           <span class="stack-tag">JavaScript</span>
           <span class="stack-tag">RICE / ICE / MoSCoW</span>
           <span class="stack-tag">CSV Export</span>
+        </div>
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m10 9 5 3-5 3Z"/></svg></span>VAST Video Ad-Tag Inspector</div>
+          <div class="ai-tool-links">
+            <a href="https://github.com/sujithsuresh-803/vast-ad-inspector" target="_blank" class="ai-tool-link link-gh">GitHub</a>
+          </div>
+        </div>
+        <p class="ai-tool-desc">An implementation-review tool for video ad serving. It parses a <strong>VAST</strong> ad tag (the IAB standard <strong>Google Ad Manager</strong> serves for video/CTV) and validates it against ad-serving best practices &mdash; impression &amp; quartile tracking, MP4/adaptive-bitrate device reach, VPAID deprecation, wrapper-chain depth, and Open Measurement (OM SDK) viewability &mdash; returning a partner-ready PASS/WARN/FAIL report with a health score.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">IAB VAST 4.x</span>
+          <span class="stack-tag">XML</span>
+          <span class="stack-tag">Ad-Tech</span>
+          <span class="stack-tag">CTV / Video</span>
+        </div>
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.8 7.2 10.6 16M17.2 8.4 13.2 16.4M7 6.2l10 .6"/></svg></span>OntoGraph</div>
+          <div class="ai-tool-links">
+            <a href="https://github.com/sujithsuresh-803/ontograph" target="_blank" class="ai-tool-link link-gh">GitHub</a>
+          </div>
+        </div>
+        <p class="ai-tool-desc">An enterprise <strong>knowledge graph</strong> for the Order-to-Cash process: an OWL/RDFS ontology queried with <strong>SPARQL</strong>, quality-checked with <strong>SHACL</strong> shapes, and served through a <strong>GraphRAG</strong> layer that answers natural-language business questions by generating SPARQL, traversing the graph, and grounding an LLM on the retrieved facts. The semantic-layer counterpart to RAGgraph.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">rdflib</span>
+          <span class="stack-tag">SPARQL</span>
+          <span class="stack-tag">SHACL</span>
+          <span class="stack-tag">OWL / RDFS</span>
+          <span class="stack-tag">GraphRAG</span>
+        </div>
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8a4 4 0 0 1 0 8H8"/><path d="M6 7h13"/><path d="M6 11h9"/><path d="m9 11 6 10"/></svg></span>Google Pay Monetization Strategy</div>
+          <div class="ai-tool-links">
+            <a href="https://github.com/sujithsuresh-803/gpay-monetization-analysis" target="_blank" class="ai-tool-link link-gh">GitHub</a>
+          </div>
+        </div>
+        <p class="ai-tool-desc">A product-strategy case study on how <strong>Google Pay</strong> can grow revenue in India despite zero-MDR UPI &mdash; reframing the play as monetising purchase intent and data one layer up (credit &amp; financial-services distribution), with a <strong>RICE</strong>-prioritised roadmap and a transparent Python revenue sensitivity model across conservative / base / aggressive scenarios.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Product Strategy</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Pandas</span>
+          <span class="stack-tag">Matplotlib</span>
+          <span class="stack-tag">RICE</span>
+        </div>
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>Splunk Ops Analytics</div>
+          <div class="ai-tool-links">
+            <a href="https://github.com/sujithsuresh-803/splunk-ops-analytics" target="_blank" class="ai-tool-link link-gh">GitHub</a>
+          </div>
+        </div>
+        <p class="ai-tool-desc">An operations-analytics project on <strong>Splunk</strong>: <strong>SPL</strong> queries and a dashboard over sample application and infrastructure logs &mdash; surfacing error-rate spikes, latency percentiles, and the top failing endpoints so an ops team can triage incidents faster.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Splunk</span>
+          <span class="stack-tag">SPL</span>
+          <span class="stack-tag">Dashboards</span>
+          <span class="stack-tag">Log Analytics</span>
         </div>
       </div>
 
