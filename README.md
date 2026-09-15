@@ -2,7 +2,7 @@
 
 > Digital Innovation Engineer · Product & AI · Ex-Amazon · Ex-Bosch
 
-Live at: **[sujithsuresh.github.io](https://sujithsuresh.github.io)**
+Live at: **[sujithsuresh-803.github.io](https://sujithsuresh-803.github.io)**
 
 ---
 
@@ -16,7 +16,10 @@ Personal portfolio showcasing my work across product management, AI automation, 
 
 | File | Description |
 |------|-------------|
-| `index.html` | The entire portfolio — hero, about, projects, experience, contact |
+| `index.html` | Main portfolio (Product & AI) — hero, about, projects, experience, contact |
+| `portfolio_sujith_ai.html` | AI-engineering portfolio — agentic systems, RAG, production LLM work |
+| `portfolio_google_sujith.html` | The same, themed for Google Cloud applications |
+| `portfolio_*_sujith.html` | Other role-tailored one-pagers, linked directly rather than from the nav |
 
 ---
 
@@ -43,4 +46,4 @@ Personal portfolio showcasing my work across product management, AI automation, 
 
 - Email: sujithsuresh803@gmail.com
 - Phone: +91 8296491170
-- LinkedIn: [linkedin.com/in/sujith-suresh](https://linkedin.com/in/sujith-suresh)
+- LinkedIn: [linkedin.com/in/sujith-suresh-6961b621a](https://linkedin.com/in/sujith-suresh-6961b621a)
