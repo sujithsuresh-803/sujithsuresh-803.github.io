@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sujith Suresh - AI Engineer. Agentic systems, RAG and production LLM work.">
+<style>:root{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Sujith Suresh — Agentic AI</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F1F4F8; --surface:#FFFFFF; --surface-2:#F7F9FC; --surface-3:#EBF0F6;
+  --ink:#10151C; --muted:#5A6675; --faint:#8593A4;
+  --line:#DCE3EC; --line-soft:#E6EBF2;
+  --blue:#1F4FD8; --red:#A8492A; --yellow:#0F766E; --green:#4C3FB5;
+  --blue-soft:#E7EDFD; --accent:var(--blue);
+  --shadow:0 1px 2px rgba(16,21,28,.10), 0 1px 3px 1px rgba(16,21,28,.06);
+  --shadow-2:0 2px 6px rgba(16,21,28,.12), 0 6px 14px rgba(16,21,28,.10);
+  --sans:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B0F15; --surface:#141A23; --surface-2:#10161E; --surface-3:#1B222C;
+    --ink:#E9EEF4; --muted:#95A3B4; --faint:#6F7E91;
+    --line:#222B36; --line-soft:#1C242E;
+    --blue:#7599FF; --red:#E0794E; --yellow:#5EC4B6; --green:#9A8CFF;
+    --blue-soft:#17223C;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 1px 3px 1px rgba(0,0,0,.3);
+    --shadow-2:0 2px 6px rgba(0,0,0,.55), 0 6px 14px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+    --ground:#0B0F15; --surface:#141A23; --surface-2:#10161E; --surface-3:#1B222C;
+  --ink:#E9EEF4; --muted:#95A3B4; --faint:#6F7E91;
+  --line:#222B36; --line-soft:#1C242E;
+  --blue:#7599FF; --red:#E0794E; --yellow:#5EC4B6; --green:#9A8CFF;
+  --blue-soft:#17223C;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 1px 3px 1px rgba(0,0,0,.3);
+  --shadow-2:0 2px 6px rgba(0,0,0,.55), 0 6px 14px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.6; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue); text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--blue); outline-offset:3px; border-radius:4px}
+h1,h2,h3,h4{margin:0; line-height:1.15; text-wrap:balance; font-weight:600; font-family:var(--display)}
+
+/* signature four-colour hairline */
+.bar{display:flex; height:3px; background:var(--accent)}
+.bar i{flex:1}
+
+.wrap{max-width:1120px; margin:0 auto; padding-inline:20px; padding-block:0}
+.shell{display:grid; grid-template-columns:296px 1fr; gap:48px; align-items:start}
+@media (max-width:880px){ .shell{grid-template-columns:1fr; gap:32px} }
+
+/* left rail */
+.rail{position:sticky; top:calc(env(safe-area-inset-top,0px) + 32px); padding-block:44px 0}
+@media (max-width:880px){ .rail{position:static; padding-block:32px 0} }
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin:0 0 12px}
+.name{font-size:clamp(32px,4.2vw,44px); font-weight:800; letter-spacing:-.02em}
+.role{font-family:var(--mono); font-size:12.5px; color:var(--blue); margin-top:8px}
+.blurb{color:var(--muted); font-size:15px; margin-top:16px; max-width:34ch}
+.chip-avail{display:inline-flex; align-items:center; gap:8px; margin-top:18px; font-size:12.5px; color:var(--muted);
+  border:1px solid var(--line); background:var(--surface-2); padding:6px 12px; border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.links{display:flex; flex-direction:column; gap:8px; margin-top:22px; font-size:13.5px}
+.links a{display:inline-flex; gap:10px; align-items:baseline}
+.links span{color:var(--faint); font-family:var(--mono); font-size:11px; width:16px; display:inline-block}
+
+/* main */
+.main{padding-block:44px 64px; min-width:0}
+@media (max-width:880px){ .main{padding-block:0 52px} }
+.thesis{font-size:clamp(20px,2.4vw,26px); font-weight:300; line-height:1.4; max-width:32ch; margin:0; color:var(--ink)}
+.thesis b{font-weight:500; color:var(--blue)}
+
+section{margin-top:52px}
+.sec-head{display:flex; align-items:baseline; gap:12px; margin-bottom:20px}
+.sec-head h2{font-size:14px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+.sec-head .n{font-family:var(--mono); font-size:11px; color:var(--faint)}
+
+/* metrics */
+.metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+@media (max-width:700px){ .metrics{grid-template-columns:repeat(2,1fr)} }
+.metric{background:var(--surface); border-radius:12px; padding:18px 16px; box-shadow:var(--shadow); border-top:3px solid var(--c)}
+.metric:nth-child(1){--c:var(--blue)} .metric:nth-child(2){--c:var(--red)}
+.metric:nth-child(3){--c:var(--yellow)} .metric:nth-child(4){--c:var(--green)}
+.metric .v{font-size:26px; font-weight:400; letter-spacing:-.5px; font-variant-numeric:tabular-nums}
+.metric .k{font-size:12.5px; color:var(--muted); margin-top:4px; line-height:1.4}
+
+/* production */
+.prod{display:flex; flex-direction:column; gap:12px}
+.entry{background:var(--surface-2); border-radius:12px; padding:18px 20px; display:grid; grid-template-columns:104px 1fr; gap:20px; align-items:start}
+@media (max-width:620px){ .entry{grid-template-columns:1fr; gap:8px} }
+.entry .stat{font-family:var(--mono); font-size:13px; color:var(--blue); font-variant-numeric:tabular-nums; padding-top:2px}
+.entry h3{font-size:16px; font-weight:500}
+.entry p{margin:6px 0 0; color:var(--muted); font-size:14.5px; max-width:62ch}
+
+/* projects */
+.proj{background:var(--surface); border-radius:12px; box-shadow:var(--shadow); padding:22px 22px 20px;
+  display:grid; grid-template-columns:1fr 150px; gap:24px; align-items:start; margin-bottom:12px;
+  border-left:4px solid var(--c)}
+.proj:nth-of-type(1){--c:var(--blue)} .proj:nth-of-type(2){--c:var(--red)}
+.proj:nth-of-type(3){--c:var(--yellow)} .proj:nth-of-type(4){--c:var(--green)}
+@media (max-width:760px){ .proj{grid-template-columns:1fr; gap:14px} }
+.proj h3{font-size:17px; font-weight:500}
+.proj p{margin:8px 0 0; color:var(--muted); font-size:14.5px; max-width:60ch}
+.tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.tag{font-size:11.5px; color:var(--muted); background:var(--surface-3); padding:4px 10px; border-radius:999px}
+.plinks{display:flex; gap:16px; margin-top:14px; font-size:13px; font-weight:500}
+.glyph{display:block; width:100%; height:auto}
+.glyph text{font-family:var(--mono); font-size:7px; fill:var(--faint)}
+.gnode{fill:var(--surface); stroke:var(--c); stroke-width:1.4}
+.gedge{stroke:var(--line); stroke-width:1.4; fill:none}
+.gedge.hot{stroke:var(--c)}
+
+/* stack */
+.stack{display:grid; gap:14px}
+.srow{display:grid; grid-template-columns:150px 1fr; gap:18px; align-items:start}
+@media (max-width:620px){ .srow{grid-template-columns:1fr; gap:4px} }
+.srow h4{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); font-weight:400; padding-top:3px}
+.srow p{margin:0; font-size:14.5px; color:var(--muted)}
+.srow b{color:var(--ink); font-weight:500}
+
+footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:8px 24px; align-items:baseline; font-size:12.5px; color:var(--faint)}
+</style>
+
+</head>
+<body>
+<div class="bar"><i></i><i></i><i></i><i></i></div>
+
+<div class="wrap">
+<div class="shell">
+
+  <aside class="rail">
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="name">Sujith&nbsp;Suresh</h1>
+    <p class="role">AI Engineer · Agentic systems &amp; RAG</p>
+    <p class="blurb">I build LLM systems that run in production — and sit with the customers who have to trust them.</p>
+    <div class="chip-avail"><span class="dot"></span> Chennai · open to relocate · immediate joiner</div>
+    <nav class="links">
+      <a href="https://github.com/sujithsuresh-803"><span>gh</span>github.com/sujithsuresh-803</a>
+      <a href="https://linkedin.com/in/sujith-suresh-6961b621a"><span>in</span>linkedin.com/in/sujith-suresh</a>
+      <a href="mailto:sujithsuresh803@gmail.com"><span>@</span>sujithsuresh803@gmail.com</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <p class="thesis">Most agent demos never meet a real user. Mine triage <b>200+ alarms a day</b> for paying customers, and write the reports those customers open on the first of the month.</p>
+
+    <section>
+      <div class="sec-head"><h2>Track record</h2><span class="n">measured, in production</span></div>
+      <div class="metrics">
+        <div class="metric"><div class="v">90–95%</div><div class="k">Agent triage accuracy, 200+ alarms/day</div></div>
+        <div class="metric"><div class="v">&lt;5 min</div><div class="k">Time-to-insight, down from 20–45 min</div></div>
+        <div class="metric"><div class="v">100+</div><div class="k">Industrial customers served by an LLM report pipeline</div></div>
+        <div class="metric"><div class="v">50+</div><div class="k">Countries running the platform I build on</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><h2>Systems in production</h2><span class="n">Buckman · global industrial SaaS</span></div>
+      <div class="prod">
+        <div class="entry">
+          <div class="stat">90–95%</div>
+          <div>
+            <h3>Agentic alarm triage, orchestrated over MCP</h3>
+            <p>An Azure OpenAI agent that triages high-criticality IoT alarms end to end — Python tool functions for telemetry, precedent search and rule evaluation, with cooling-tower chemistry encoded into the instruction layer. A pre-fetch pipeline removed live-API latency and cut time-to-insight from 20–45 minutes to under five.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="stat">100% auto</div>
+          <div>
+            <h3>LLM report pipeline for 100+ sites</h3>
+            <p>Every monthly performance report AI-generated and emailed within the first hour of the month: live telemetry over REST, KPIs computed against site-specific limits, prior reports used as precedent, then assembled and delivered — Parquet → charts → docx → inbox.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="stat">75% CV</div>
+          <div>
+            <h3>Predictive alarm model</h3>
+            <p>An XGBoost classifier that forecasts which operating conditions will trigger an alarm and points at the likely root cause — engineered from historical IoT telemetry through domain-driven feature engineering. Moved alarm handling from reactive to predictive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><h2>Open source &amp; shipped</h2><span class="n">architecture shown inline</span></div>
+
+      <article class="proj">
+        <div>
+          <h3>RAGgraph</h3>
+          <p>An agentic RAG microservice shaped like production: hybrid retrieval (dense + BM25) fused with reciprocal-rank fusion, then cross-encoder re-ranking, orchestrated by a LangGraph state graph that grades its own context and re-queries when retrieval comes back weak. SSE token streaming, Prometheus probes, Docker and Kubernetes manifests.</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Qdrant</span><span class="tag">RRF</span><span class="tag">cross-encoder</span><span class="tag">FastAPI</span><span class="tag">Kubernetes</span></div>
+          <div class="plinks"><a href="https://github.com/sujithsuresh-803/raggraph">Code ↗</a></div>
+        </div>
+        <svg class="glyph" viewBox="0 0 140 62" role="img" aria-label="Retrieve, grade, generate — with a re-query loop back to retrieve">
+          <path class="gedge" d="M16 22 H40"/><path class="gedge" d="M56 22 H82"/><path class="gedge hot" d="M98 22 H123"/>
+          <path class="gedge hot" d="M90 30 C90 46, 40 46, 40 30" stroke-dasharray="3 3"/>
+          <circle class="gnode" cx="10" cy="22" r="5"/><circle class="gnode" cx="48" cy="22" r="7"/>
+          <circle class="gnode" cx="90" cy="22" r="7"/><circle class="gnode" cx="128" cy="22" r="5"/>
+          <text x="38" y="40">retrieve</text><text x="82" y="40">grade</text><text x="108" y="14">gen</text>
+          <text x="44" y="58">re-query if weak</text>
+        </svg>
+      </article>
+
+      <article class="proj">
+        <div>
+          <h3>Deal Hunter</h3>
+          <p>An LLM orchestrating external tools over MCP — scraping, product matching and coupon/card-stacking — to compute a product's true post-offer price across Amazon.in, Flipkart and HP India. One shared engine backs a FastAPI app, a Streamlit client and the MCP server, which makes it a working demonstration of secure tool and function calling.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">tool calling</span><span class="tag">LLM agent</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+          <div class="plinks"><a href="https://deal-hunter-mcp.streamlit.app">Live ↗</a><a href="https://github.com/sujithsuresh-803/deal-hunter">Code ↗</a></div>
+        </div>
+        <svg class="glyph" viewBox="0 0 140 62" role="img" aria-label="LLM calls three external tools through an MCP server">
+          <path class="gedge hot" d="M23 26 H52"/>
+          <path class="gedge" d="M68 20 L105 10"/><path class="gedge" d="M68 26 H105"/><path class="gedge" d="M68 32 L105 42"/>
+          <circle class="gnode" cx="16" cy="26" r="7"/><rect class="gnode" x="53" y="19" width="15" height="14" rx="3"/>
+          <circle class="gnode" cx="110" cy="10" r="4.5"/><circle class="gnode" cx="110" cy="26" r="4.5"/><circle class="gnode" cx="110" cy="42" r="4.5"/>
+          <text x="6" y="44">LLM</text><text x="50" y="44">MCP</text><text x="100" y="56">tools</text>
+        </svg>
+      </article>
+
+      <article class="proj">
+        <div>
+          <h3>OntoGraph</h3>
+          <p>GraphRAG over an enterprise knowledge graph: an OWL/RDFS ontology of the Order-to-Cash process, quality-gated with SHACL shapes and queried with SPARQL. Natural-language questions become generated SPARQL, traverse the graph, and ground the LLM on retrieved facts — so "how much do APAC customers still owe?" is a SUM over a traversal, and every number traces back to a triple.</p>
+          <div class="tags"><span class="tag">GraphRAG</span><span class="tag">SPARQL</span><span class="tag">OWL / RDFS</span><span class="tag">SHACL</span><span class="tag">rdflib</span></div>
+          <div class="plinks"><a href="https://github.com/sujithsuresh-803/ontograph">Code ↗</a></div>
+        </div>
+        <svg class="glyph" viewBox="0 0 140 62" role="img" aria-label="Ontology and data form a validated graph, queried by SPARQL to ground an LLM">
+          <path class="gedge" d="M18 14 L44 24"/><path class="gedge" d="M18 38 L44 28"/>
+          <path class="gedge hot" d="M61 26 H86"/><path class="gedge hot" d="M100 26 H123"/>
+          <circle class="gnode" cx="13" cy="14" r="4.5"/><circle class="gnode" cx="13" cy="38" r="4.5"/>
+          <rect class="gnode" x="46" y="19" width="15" height="14" rx="3"/>
+          <circle class="gnode" cx="93" cy="26" r="6"/><circle class="gnode" cx="128" cy="26" r="5"/>
+          <text x="2" y="52">ontology + data</text><text x="78" y="44">SPARQL</text><text x="114" y="14">LLM</text>
+        </svg>
+      </article>
+
+      <article class="proj">
+        <div>
+          <h3>VoC Intelligence Platform</h3>
+          <p>Gemini-powered LLM orchestration that auto-tags 800+ real customer interactions by theme, sentiment and severity, then generates executive-ready priority matrices. Built because the manual version was eating a day a week — an applied case of moving an LLM from prototype to a workflow stakeholders actually use to prioritise.</p>
+          <div class="tags"><span class="tag">Google Gemini API</span><span class="tag">LLM orchestration</span><span class="tag">NLP</span><span class="tag">Streamlit</span></div>
+          <div class="plinks"><a href="https://voc-pgqvcesvparenwdz59rynz.streamlit.app">Live ↗</a><a href="https://github.com/sujithsuresh-803/voc-platform">Code ↗</a></div>
+        </div>
+        <svg class="glyph" viewBox="0 0 140 62" role="img" aria-label="Customer interactions classified by Gemini into a priority matrix">
+          <path class="gedge" d="M20 14 L46 25"/><path class="gedge" d="M20 26 H46"/><path class="gedge" d="M20 38 L46 29"/>
+          <path class="gedge hot" d="M64 26 H93"/>
+          <circle class="gnode" cx="15" cy="14" r="4"/><circle class="gnode" cx="15" cy="26" r="4"/><circle class="gnode" cx="15" cy="38" r="4"/>
+          <circle class="gnode" cx="55" cy="26" r="8"/>
+          <rect class="gnode" x="96" y="16" width="9" height="9" rx="1.5"/><rect class="gnode" x="107" y="16" width="9" height="9" rx="1.5"/>
+          <rect class="gnode" x="96" y="27" width="9" height="9" rx="1.5"/><rect class="gnode" x="107" y="27" width="9" height="9" rx="1.5"/>
+          <text x="0" y="52">800+ interactions</text><text x="44" y="44">Gemini</text><text x="95" y="50">matrix</text>
+        </svg>
+      </article>
+    </section>
+
+    <section>
+      <div class="sec-head"><h2>Stack</h2><span class="n">hands-on</span></div>
+      <div class="stack">
+        <div class="srow"><h4>Agents &amp; LLM</h4><p><b>MCP</b>, LangChain, LangGraph, tool &amp; function calling, prompt engineering, LLM evaluation &amp; failure analysis, <b>Azure OpenAI</b>, <b>Google Gemini API</b></p></div>
+        <div class="srow"><h4>Retrieval</h4><p>RAG architectures, hybrid retrieval (dense + BM25), reciprocal-rank fusion, cross-encoder re-ranking, embeddings, <b>Qdrant</b>, GraphRAG over SPARQL / OWL / SHACL</p></div>
+        <div class="srow"><h4>Cloud &amp; deploy</h4><p>Serverless (Azure Functions, Logic Apps), <b>Docker</b>, <b>Kubernetes</b>, multi-tenant SaaS, event-driven (Azure IoT Hub), Cosmos DB, AWS S3 / Redshift, Prometheus, SSE streaming, FastAPI</p></div>
+        <div class="srow"><h4>Data &amp; ML</h4><p><b>Python</b>, <b>SQL</b>, VBA, XGBoost, scikit-learn, feature engineering, OpenCV, Pandas, Power BI (RLS, DAX), Tableau, Amazon QuickSight</p></div>
+        <div class="srow"><h4>Customer-facing</h4><p>Technical advisory, enablement &amp; certification training, solution demos, discovery, UAT &amp; go-live, adoption tracking</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>B.Tech, Amrita Vishwa Vidyapeetham · CGPA 8.46</span>
+      <span>Ex-Amazon (L4 BA, Last Mile) · Ex-Bosch</span>
+      <span>Published research — RL + genetic algorithms</span>
+    </footer>
+  </main>
+
+</div>
+</div>
+
+</body>
+</html>
