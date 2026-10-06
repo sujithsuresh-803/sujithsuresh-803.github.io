@@ -257,6 +257,25 @@
 
       <div class="ai-tool-card">
         <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></span>PGDesk</div>
+          <div class="ai-tool-links">
+            <a href="https://pgdesk.svenelle.workers.dev" target="_blank" class="ai-tool-link link-live">Live &#8599;</a>
+            <a href="https://github.com/sujithsuresh-803/PGDesk" target="_blank" class="ai-tool-link link-gh">GitHub</a>
+          </div>
+        </div>
+        <p class="ai-tool-desc">Multi-tenant property-management SaaS running a real 20-room, 75-tenant paying-guest building &mdash; room allotment from a public apply link, automatic electricity-bill splitting, a rent ledger and SLA-backed maintenance tickets. Tenant isolation is enforced in <strong>Postgres row-level security</strong> rather than application code, verified with a script that signs in as a real tenant and diffs what exists against what they can read. Bill splitting runs as a Postgres function in integer paise with remainder distribution, so per-head shares reconcile to the room total exactly. Ships on free-tier infrastructure (~&#8377;75/month) with UPI deep links instead of a payment gateway.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Next.js 16</span>
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">PostgreSQL</span>
+          <span class="stack-tag">Supabase</span>
+          <span class="stack-tag">Row-Level Security</span>
+          <span class="stack-tag">Cloudflare Workers</span>
+          <span class="stack-tag">PWA</span>
+        </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
           <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.6 12.6 12 20.2a1.9 1.9 0 0 1-2.7 0l-6-6A1.9 1.9 0 0 1 2.8 12V4.5A1.7 1.7 0 0 1 4.5 2.8H12a1.9 1.9 0 0 1 1.3.6l6.3 6.3a1.9 1.9 0 0 1 0 2.9Z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg></span>Deal Hunter</div>
           <div class="ai-tool-links">
             <a href="https://deal-hunter-mcp.streamlit.app/" target="_blank" class="ai-tool-link link-live">Live Demo &#8599;</a>
@@ -393,6 +412,23 @@
           <span class="stack-tag">SPL</span>
           <span class="stack-tag">Dashboards</span>
           <span class="stack-tag">Log Analytics</span>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-tool-top">
+          <div class="ai-tool-name"><span class="tool-ic"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 3.5-4 3 3L20 7"/><path d="M20 11V7h-4"/></svg></span>Quant Trader</div>
+        </div>
+        <p class="ai-tool-desc">A paper-trading system for NSE stocks, F&amp;O and index options &mdash; real market data via <strong>Yahoo Finance</strong> with simulated execution against &#8377;5,00,000 of paper capital. Four strategies (momentum, mean reversion, options theta, and a six-indicator composite) run over EMA, RSI, MACD, Bollinger and ATR signals, and every signal carries an entry, an ATR-sized stop-loss, a target and a risk/reward ratio, with position sizing derived from capital per trade. <em>Simulated end to end &mdash; no broker integration, no real money, and not investment advice.</em> Runs locally; not yet deployed.</p>
+        <div class="ai-tool-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Flask</span>
+          <span class="stack-tag">yfinance</span>
+          <span class="stack-tag">Pandas / NumPy</span>
+          <span class="stack-tag">Technical Indicators</span>
+          <span class="stack-tag">Paper Trading</span>
         </div>
       </div>
 
